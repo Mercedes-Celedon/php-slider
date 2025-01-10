@@ -1,0 +1,100 @@
+@use 'variables' as v;
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+
+    .swiper-wrapper {
+        gap: 20px;
+        height: auto;
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 410px !important;
+            height: 520px;
+            border: 1px solid v.$border-color;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 10px 0 10px;
+
+            img {
+                border-radius: 8px;
+                width: 100%;
+            }
+
+            .description {
+                width: 95%;
+
+                .price {
+                    display: flex;
+                    align-items: baseline;
+                    flex-wrap: nowrap;
+                    padding-bottom: 15px;
+                }
+
+                .btn-desktop {
+                    font-size: v.$btn-text-size;
+                    font-weight: v.$font-bold;
+                    padding: 10px 20px;
+                    background-color: v.$ultramar-color;
+                    border-radius: 6.43px;
+
+                    @media(max-width: 440px) {
+                        display: none;
+                    }
+                }
+
+                .btn-mobile {
+                    font-size: v.$btn-text-size;
+                    font-weight: v.$font-bold;
+                    padding: 10px 20px;
+                    background-color: v.$ultramar-color;
+                    border-radius: 6.43px;
+                    display: none;
+
+                    @media(max-width: 440px) {
+                        display: block;
+                        width: 25%;
+                        padding: 10px;
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: v.$drop-shadow;
+            }
+
+            @media(max-width: 440px) {
+                width: 313px !important;
+                height: 400px;
+            }
+        }
+
+    }
+}
+
+.swiper-pagination {
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: v.$bullet-color;
+        margin-right: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .swiper-pagination-bullet.merged {
+        background-color: v.$ultramar-color;
+        border-radius: 5px;
+        margin-right: 0;
+    }
+
+    .swiper-pagination-bullet.merged:first-of-type {
+        width: 20px;
+    }
+
+}

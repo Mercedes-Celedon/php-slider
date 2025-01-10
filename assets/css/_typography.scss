@@ -1,0 +1,59 @@
+@use 'variables' as v;
+h2 {
+    font-size: v.$title-size;
+    font-weight: v.$font-bold;
+    text-align: center;
+    line-height: 41px;
+    padding: 0 190px;
+    @media (max-width: 768px) {
+        padding: 0 20px;
+    }
+    @media(max-width: 440px){
+        padding: 0 10px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+h3 {
+    font-size: v.$title-product-size;
+    font-weight: v.$font-bold;
+    margin: 20px 0;
+    @media (max-width: 768px) {
+        margin: 10px 0;
+    }
+    @media(max-width: 440px){
+        margin: 5px 0;
+        font-size: 18px;
+        line-height: auto;
+    }
+}
+.btn-desktop, .btn-mobile, .btn-modal-mobile, .btn-modal-desktop{
+    color: v.$btn-text-color;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    text-align: center;
+    text-transform: uppercase;
+    @media(max-width: 440px) {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        line-height: 14px;
+    }
+}
+.price .integer-part {
+    font-size: v.$title-size; 
+    font-weight: v.$font-semibold;
+    @media(max-width: 440px){
+        font-size: 22px;
+        line-height: 22.22px;
+    }
+
+}
+
+.price .decimal-part {
+    font-size: v.$price-description-size; 
+    font-weight: v.$font-semibold;
+    @media(max-width: 440px){
+        font-size: 14px;
+        line-height: 16.1px;
+    }    
+}
